@@ -1,7 +1,7 @@
 -- Prescriptions Table
 CREATE TABLE prescriptions (
     row_id SERIAL PRIMARY KEY,
-    subject_id INT REFERENCES patients(subject_id),
+    subject_id INT REFERENCES pients(subject_id),
     hadm_id INT REFERENCES admissions(hadm_id),
     icustay_id INT NULL REFERENCES icustays(icustay_id),
     startdate TIMESTAMP,

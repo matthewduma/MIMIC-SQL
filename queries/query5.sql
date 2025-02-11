@@ -9,3 +9,4 @@ AND pr.drug_name_generic IS NOT NULL
 GROUP BY pr.drug_name_generic
 ORDER BY unique_patient_count DESC
 LIMIT 5;
+

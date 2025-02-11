@@ -10,3 +10,4 @@ WHERE a.hadm_id IN (
     WHERE icd9_code = '486'
 )
 GROUP BY a.insurance;
+

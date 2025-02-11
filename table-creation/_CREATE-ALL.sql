@@ -84,7 +84,7 @@ CREATE TABLE prescriptions (
 -- Lab Items Dictionary Table
 CREATE TABLE d_labitems (
     row_id SERIAL PRIMARY KEY,
-    itemid INT UNIQUE,
+    itemid INT,
     label VARCHAR(255),
     fluid VARCHAR(50),
     category VARCHAR(50),
@@ -96,7 +96,7 @@ CREATE TABLE labevents (
     row_id SERIAL PRIMARY KEY,
     subject_id INT REFERENCES patients(subject_id),
     hadm_id INT NULL REFERENCES admissions(hadm_id),
-    itemid INT REFERENCES d_labitems(itemid),
+    itemid INT,
     charttime TIMESTAMP,
     value VARCHAR(255) NULL,
     valuenum FLOAT NULL,

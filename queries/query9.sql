@@ -18,3 +18,6 @@ FROM (
     GROUP BY p.subject_id, p.gender
 ) sub
 GROUP BY gender;
+
+
+
